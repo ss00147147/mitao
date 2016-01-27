@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>蜜桃旅行</title>
+    <meta name="keywords" content="蜜桃旅行"/>
+    <meta name="description" content="蜜桃旅行"/>
+    <meta name="title" content="蜜桃旅行">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="no"/>
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <meta name="x5-orientation" content="portrait">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="stylesheet" type="text/css" href="css/register_login.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/register_login.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+
+
+
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            font:  'San Francisco','Helvetica','STXihei', "华文细黑" ,"Microsoft YaHei", "微软雅黑","SimHei","黑体"	;
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            list-style: none;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        html, body {
+            -webkit-font-smoothing:antialiased;
+            width: 100%;
+            height: 100%;
+            background:url('img/Background.png') no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+        @media only screen and (min-width: 1081px) {
+            html,body{
+                font-size: 270%
+            }
+
+        }
+        @media only screen and (min-width: 721px) and (max-width: 1080px) {
+            html,body{
+                font-size: 270%
+            }
+
+        }
+        @media only screen and (min-width: 641px) and (max-width: 720px) {
+            html,body{
+                font-size: 178%
+            }
+
+        }
+        @media only screen and (min-width: 481px) and (max-width: 640px) {
+            html,body{
+                font-size: 160%
+            }
+
+        }
+        @media only screen and (min-width: 415px) and (max-width: 480px) {
+            html,body{
+                font-size: 120%
+            }
+        }
+        @media only screen and (min-width: 376px) and (max-width: 414px) {
+            html,body{
+                font-size: 103.5%
+            }
+        }
+        @media only screen and (min-width: 361px) and (max-width: 375px) {
+            html,body{
+                font-size: 93.75%
+            }
+        }
+        @media only screen and (min-width: 321px) and (max-width: 360px) {
+            html,body{
+                font-size:90%
+            }
+
+        }
+        @media only screen and (max-width: 320px){
+            html,body{
+                font-size: 80%
+            }
+
+        }
+
+
+        .main{
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+
+        .bot_manu{
+            width: 100%;
+            height: 10%;
+            position: fixed;
+            bottom: 0;
+            background: #fff;
+            z-index: 100;
+        }
+
+
+        .bot_manu img{
+            width: 10%;
+            margin:0.8rem 5%;
+            float: left;
+        }
+
+        .tab{
+            width: 100%;
+            height: 8%;
+            position: fixed;
+            top: 0;
+            background: #fff;
+        }
+
+        .tab div{
+            width: 90%;
+            height: 100%;
+            margin: 0 5%;
+
+        }
+        .tab_h2{
+            width:33.3% ;
+            height:3rem;
+            line-height: 3.5rem;
+            float: left;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #a2a2a2;
+        }
+
+        .tab_active{
+            border-bottom:0.2rem solid #d27579 ;
+            color:#d27579 ;
+        }
+
+
+
+        .content_1{
+            width: 100%;
+            top: 8%;
+            height: 82%;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            background: #fff;
+            position: fixed;
+        }
+
+        .content_big_img{
+            width: 100%;
+            height: 20rem;
+        }
+
+        .content_big_img_text{
+            width: 80%;
+            height: 15rem;
+            margin: 4rem 10% 0 10%;
+            position: absolute;
+        }
+        .content_big_img_text h2{
+            width: 100%;
+            height: 6rem;
+            line-height: 2rem;
+            color: #fff;
+            text-align: center;
+            font-size: 1.3rem;
+
+        }
+
+        .content_big_img_text h3{
+            width: 60%;
+            margin: 2rem 20% 0 20%;
+            height: 3rem;
+            border-radius:1.5rem;
+            background: #ed8084;
+            line-height: 3rem;
+            text-align: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .content_big_img_text h4{
+            width: 100%;
+            margin: 2rem 0 0 0 ;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            color: #fff;
+            font-size:0.9rem;
+            font-weight: normal;
+        }
+
+        .content_list{
+            width: 100%;
+            height: auto;
+        }
+
+
+        .content_list ul{
+            width: 100%;
+            height: auto;
+        }
+
+        .content_list ul li{
+            width: 100%;
+            height: 10rem;
+        }
+
+        .content_list ul li div{
+            width: 50%;
+            height: 10rem;
+            overflow: hidden;
+            float: left;
+        }
+
+        .content_list ul li div img{
+            width: 100%;
+            height:auto;
+
+        }
+
+        .content_list ul li div h2{
+            width: 80%;
+            height: 2rem;
+            line-height: 2rem;
+            margin: 1rem 10% 0 10%;
+            color: #a2a2a2;
+            font-size: 0.8rem;
+
+        }
+
+        .content_list ul li div h3{
+            width: 80%;
+            height: 4.5rem;
+            line-height: 1.5rem;
+            margin: 0 10%;
+            text-justify: auto;
+            overflow: hidden;
+            font-size: 0.8rem;
+            color: #666;
+
+        }
+
+
+        .content_list ul li div h4{
+            width: 80%;
+            margin: 0 10%;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: 0.8rem;
+            text-align: left;
+            color: #d27579;
+
+        }
+
+
+        .content_2{
+            width: 100%;
+            top: 8%;
+            height: 82%;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            background: #fff;
+            position: fixed;
+            display: none;
+        }
+
+        .content_3{
+            width: 100%;
+            top: 8%;
+            height: 82%;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            background: #fff;
+            position: fixed;
+            display: none;
+        }
+
+
+        .content_list_3{
+            width: 100%;
+            height: auto;
+        }
+
+
+        .content_list_3 ul{
+            width: 100%;
+            height: auto;
+        }
+
+        .content_list_3 ul li{
+            width: 100%;
+            height: 10rem;
+            margin-top: 0.5rem;
+        }
+
+        .content_list_3 ul li div{
+            width: 100%;
+            height: 10rem;
+            overflow: hidden;
+            float: left;
+        }
+
+        .content_list_3 ul li div img{
+            width: 100%;
+            height:auto;
+
+        }
+
+        .content_list_3 ul li div h2{
+            width: 50%;
+            height: 2rem;
+            line-height: 2rem;
+            margin: 1rem 40% 0 10%;
+            color: #fff;
+            font-size: 0.8rem;
+
+        }
+
+        .content_list_3 ul li div h3{
+            width: 40%;
+            height: 4.5rem;
+            line-height: 1.5rem;
+            margin: 0 50% 0 10%;
+            text-justify: auto;
+            overflow: hidden;
+            font-size: 0.8rem;
+            color: #fff;
+
+        }
+
+
+        .content_list_3 ul li div h4{
+            width: 50%;
+            margin: 0 40% 0 10%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+
+            color: #fff;
+
+        }
+
+
+
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("#tab_1").click(function(){
+                $(".content_1").css({"display":"block"});
+                $(".content_2").css({"display":"none"});
+                $(".content_3").css({"display":"none"});
+            });
+
+            $("#tab_2").click(function(){
+                $(".content_1").css({"display":"none"});
+                $(".content_2").css({"display":"block"});
+                $(".content_3").css({"display":"none"});
+            });
+
+            $("#tab_3").click(function(){
+                $(".content_1").css({"display":"none"});
+                $(".content_2").css({"display":"none"});
+                $(".content_3").css({"display":"block"});
+            });
+
+
+
+            $(".tab_h2").click(function(){
+
+                $(".tab_h2").removeClass("tab_active");
+                $(this).addClass("tab_active");
+            });
+
+
+            if(window.orientation!=0){
+                var obj=document.getElementById('orientation');
+                alert('横屏内容太少啦，请使用竖屏观看！');
+                obj.style.display='block';
+            }
+
+            window.onorientationchange=function(){
+                var obj=document.getElementById('orientation');
+
+                if(window.orientation==0){
+                    obj.style.display='none';
+                }else
+                {
+                    alert('横屏内容太少啦，请使用竖屏观看！');
+                    obj.style.display='block';
+                }
+            };
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+<!--主框内容-->
+<div class="main">
+    <!--tab-->
+    <div class="tab">
+        <div>
+        <h2 class="tab_h2 tab_active" id="tab_1">七天行程</h2>
+        <h2 class="tab_h2" id="tab_2">一日定制</h2>
+        <h2 class="tab_h2" id="tab_3">特别行程</h2>
+        </div>
+    </div>
+    <!--七天行程-->
+    <div class="content_1">
+        <!--宣传大图-->
+        <div class="content_big_img" style="background: url('img/ec4d3928467045 + Rectangle 3 Copy.jpg') no-repeat;background-size: 100% auto">
+            <div class="content_big_img_text">
+                <h2>Stunning Photographs Offer a Rare Behind-the-scenes View of Theatre Stages</h2>
+                <h3>了解详情</h3>
+                <h4>JULY 21 ,  2015  |  2:20 PM </h4>
+            </div>
+        </div>
+        <div class="content_list">
+            <ul>
+                <li>
+                    <!--左边图-->
+                    <div style="background: url('img/lplp.png') no-repeat;background-size:100% auto;background-position: center center ">
+                        <!--<img src="img/lplp.png">-->
+                    </div>
+                    <!--右边内容-->
+                    <div>
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                </li>
+
+                <li>
+                    <!--左边内容-->
+                    <div>
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                    <!--右边图-->
+                    <div style="background: url('img/lplp.png') no-repeat;background-size:100% auto;background-position: center center ">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--一日定制-->
+    <div class="content_2">
+        <div class="content_big_img" style="background: url('img/ec4d3928467045 + Rectangle 3 Copy.jpg') no-repeat;background-size: 100% auto">
+            <div class="content_big_img_text">
+                <h2>Stunning Photographs Offer a Rare Behind-the-scenes View of Theatre Stages</h2>
+                <h3>了解详情</h3>
+                <h4>JULY 21 ,  2015  |  2:20 PM </h4>
+            </div>
+        </div>
+        <div class="content_list">
+            <ul>
+                <li>
+                    <!--左边内容-->
+                    <div>
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                    <!--右边图-->
+                    <div style="background: url('img/lplp.png') no-repeat;background-size:100% auto;background-position: center center ">
+
+                    </div>
+                </li>
+                <li>
+                    <!--左边图-->
+                    <div style="background: url('img/lplp.png') no-repeat;background-size:100% auto;background-position: center center ">
+                        <!--<img src="img/lplp.png">-->
+                    </div>
+                    <!--右边内容-->
+                    <div>
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <!--特别行程-->
+    <div class="content_3">
+        <div class="content_big_img" style="background: url('img/ec4d3928467045 + Rectangle 3 Copy.jpg') no-repeat;background-size: 100% auto">
+            <div class="content_big_img_text">
+                <h2>Stunning Photographs Offer a Rare Behind-the-scenes View of Theatre Stages</h2>
+                <h3>了解详情</h3>
+                <h4>JULY 21 ,  2015  |  2:20 PM </h4>
+            </div>
+        </div>
+
+        <div class="content_list_3">
+            <ul>
+                <li>
+                    <div style="background: url('img/ec4d3928467045.png') no-repeat;background-size:100% auto;background-position: center center ">
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                </li>
+                <li>
+                    <div style="background: url('img/ec4d3928467045.png') no-repeat;background-size:100% auto;background-position: center center ">
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                </li>
+                <li>
+                    <div style="background: url('img/ec4d3928467045.png') no-repeat;background-size:100% auto;background-position: center center ">
+                        <h2>JULY 21 ,  2015</h2>
+                        <h3>那纯洁蔚蓝的惊艳，注定了我与亚丁湾的邂逅，自从在网上看过它的照片后，我就无法忘怀它的那种独有的美丽，知晓它的一切……</h3>
+                        <h4>了解详情</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="bot_manu">
+
+    <img src="img/1.png">
+    <img src="img/2.png">
+    <img src="img/3.png">
+    <img src="img/4.png">
+    <img src="img/5.1.png">
+
+
+
+</div>
+
+
+</body>
+
+</html>

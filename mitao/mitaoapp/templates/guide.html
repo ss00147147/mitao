@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>蜜桃旅行</title>
+<meta name="keywords" content="蜜桃旅行"/>
+<meta name="description" content="蜜桃旅行"/>
+<meta name="title" content="蜜桃旅行">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+<meta name="x5-orientation" content="portrait">
+<meta name="screen-orientation" content="portrait">
+<link rel="stylesheet" type="text/css" href="css/guide.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/guide.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+
+
+
+<style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        font:  'San Francisco','Helvetica','STXihei', "华文细黑" ,"Microsoft YaHei", "微软雅黑","SimHei","黑体"	;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        list-style: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    html, body {
+        -webkit-font-smoothing:antialiased;
+        width: 100%;
+        height: 100%;
+        background:url('img/Background.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+    @media only screen and (min-width: 1081px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 721px) and (max-width: 1080px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 641px) and (max-width: 720px) {
+        html,body{
+            font-size: 178%
+        }
+
+    }
+    @media only screen and (min-width: 481px) and (max-width: 640px) {
+        html,body{
+            font-size: 160%
+        }
+
+    }
+    @media only screen and (min-width: 415px) and (max-width: 480px) {
+        html,body{
+            font-size: 120%
+        }
+    }
+    @media only screen and (min-width: 376px) and (max-width: 414px) {
+        html,body{
+            font-size: 103.5%
+        }
+    }
+    @media only screen and (min-width: 361px) and (max-width: 375px) {
+        html,body{
+            font-size: 93.75%
+        }
+    }
+    @media only screen and (min-width: 321px) and (max-width: 360px) {
+        html,body{
+            font-size:90%
+        }
+
+    }
+    @media only screen and (max-width: 320px){
+        html,body{
+            font-size: 80%
+        }
+
+    }
+
+
+    .main{
+        width: 100%;
+        height: 100%;
+    }
+    .banner{
+        position:fixed;
+        width: 100%;
+        height: 30%;
+        top: 0;
+        overflow: hidden;
+    }
+    .banner img{
+        width: 100%;
+    }
+
+    .member{
+        width: 100%;
+        height:auto;
+        position: fixed;
+        top: 31%;
+        background: #F2F2F2;
+    }
+
+    .headimg{
+        width: 8rem;
+        height: 8rem;
+        border-radius:4rem ;
+        overflow: hidden;
+        position: absolute;
+        margin: -5rem auto 0 auto;
+        left: 0;
+        right: 0;
+
+    }
+    .headimg img{
+        width: 8rem;
+        height: 8rem;
+        background: #999;
+    }
+    .interactive{
+        width: 100%;
+        height: 4rem;
+        background: #fff;
+    }
+    .interactive h2{
+        height: 1.5rem;
+        font-size: 1.3rem;
+        color: #000;
+        font-weight:normal;
+    }
+    .interactive h3{
+        height: 1.5rem;
+        font-size: 0.9rem;
+        color: #999;
+    }
+    .praise{
+        width:auto;
+        float: left;
+        margin:0.8rem 0 0 3rem;
+    }
+    .fans{
+        width:auto;
+        float: right;
+        margin:0.8rem 3rem 0 0;
+    }
+
+    .photo{
+        width: 100%;
+        height: 3rem;
+        background: #E96F77;
+
+    }
+
+    .photo div{
+        width: 76%;
+        position: absolute;
+        margin: 0.8rem 12% 0 12%;
+        left: 0;
+        right: 0;
+    }
+    .photo img{
+        width: 1.5rem;
+        height: 1.5rem;
+
+        float: left;
+    }
+    .photo h2{
+        width:100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #ededed;
+        float: right;
+
+    }
+    .photo h2 span:nth-child(1){
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #ededed;
+        float: left;
+
+    }
+    .photo h2 span:nth-child(2){
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #ededed;
+        float: right;
+        text-align: right;
+
+    }
+    .info{
+        width: 80%;
+        height:40%;
+        margin-top: 1rem;
+        padding: 0rem 10% 3rem 10%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        position: absolute;
+        top: 45%;
+    }
+    .info div{
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        overflow: auto;
+
+    }
+    .info div h2{
+        width: 20%;
+        height: 4.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        color: #d0787c;
+        float: left;
+    }
+    .info div h3{
+        width:75%;
+        margin-left: 5%;
+        height: 4.5rem;
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: #44484a;
+        float: right;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .info div ul{
+        width:75%;
+        margin-left: 5%;
+        height: 4.5rem;
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: #000;
+        float: right;
+
+    }
+
+    .info div ul li{
+        width:25%;
+        height: 3rem;
+        float: left;
+        text-align: center;
+    }
+
+    .info div ul li img{
+        height: 1.5rem;
+        margin: 0 auto;
+    }
+
+    .info div ul li h4{
+        width:100%;
+        height:1.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: normal;
+        color: #44484a;
+        float: left;
+        text-align: center;
+    }
+
+    .info div iframe{
+    }
+    .info div section{
+        width: 48%;
+        height: 8rem;
+        float: left;
+        margin-bottom: 1rem;
+    }
+    .info div section:nth-child(2n+1){
+        margin-right: 4%;
+
+    }
+    .info div section h5{
+        width: 100%;
+        height:8rem;
+        line-height:8rem;
+        text-align: center;
+        color: #fff;
+
+
+
+    }
+    .bot_manu{
+        width: 100%;
+        height: 4rem;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+    }
+
+
+    .bot_manu img{
+        width: 10%;
+        margin:0.8rem 5%;
+        float: left;
+    }
+
+</style>
+<script>
+
+</script>
+
+</head>
+
+<body>
+<!--主框内容-->
+<div class="main">
+    <!--头部-->
+    <div class="banner">
+        <img src="img/Background313.png">
+    </div>
+
+    <!--购买-->
+    <div class="member">
+        <!--头像-->
+        <div class="headimg">
+            <img src="">
+
+        </div>
+
+        <!--好评与关注-->
+        <div class="interactive">
+            <div class="praise">
+                <h2>127</h2>
+                <h3>好评数</h3>
+            </div>
+
+
+            <div class="fans">
+                <h2>75</h2>
+                <h3>关注人数</h3>
+            </div>
+        </div>
+        <!--添加照片和视频-->
+        <div class="photo">
+            <div>
+               <h2><span>Elisa Tony</span><span>日本 东京</span></h2>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--用户信息-->
+    <div class="info">
+        <div>
+            <h2>个人介绍</h2>
+            <h3>China on Thursday sent into space the country's first space telescope in a fresh search for signals of dark matter, invisible material that scientists say</h3>
+        </div>
+        <div>
+            <h2>游玩主题</h2>
+            <ul>
+                <li>
+                    <img src="img/Oval 53 + UMBRELLA.png">
+                    <h4>美食</h4>
+                </li>
+                <li>
+                    <img src="img/Oval 53 + UMBRELLA.png">
+                    <h4>冒险</h4>
+                </li>
+                <li>
+                    <img src="img/Oval 53 + UMBRELLA.png">
+                    <h4>自然</h4>
+                </li>
+                <li>
+                    <img src="img/Oval 53 + UMBRELLA.png">
+                    <h4>温泉</h4>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <iframe width="100%" height="auto" src="http://player.youku.com/embed/XMTM5NTU4MzQ4OA==" frameborder=0 allowfullscreen></iframe>
+        </div>
+        <div>
+            <section style="background: url('img/lplp.png') no-repeat;background-size: 100% auto;">
+                <h5>去夏威夷晒日光浴</h5>
+            </section>
+            <section style="background: url('img/lplp.png') no-repeat;background-size: 100% auto;">
+                <h5>去夏威夷晒日光浴</h5>
+            </section>
+            <section style="background: url('img/lplp.png') no-repeat;background-size: 100% auto;">
+                <h5>去夏威夷晒日光浴</h5>
+            </section>
+            <section style="background: url('img/lplp.png') no-repeat;background-size: 100% auto;">
+                <h5>去夏威夷晒日光浴</h5>
+            </section>
+        </div>
+
+    </div>
+    <!--底部-->
+    <div class="bot_manu">
+
+        <img src="img/1.png">
+        <img src="img/2.png">
+        <img src="img/3.png">
+        <img src="img/4.png">
+        <img src="img/5.1.png">
+
+
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+
+</html>

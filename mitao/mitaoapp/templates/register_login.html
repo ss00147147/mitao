@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>蜜桃旅行</title>
+<meta name="keywords" content="蜜桃旅行"/>
+<meta name="description" content="蜜桃旅行"/>
+<meta name="title" content="蜜桃旅行">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+<meta name="x5-orientation" content="portrait">
+<meta name="screen-orientation" content="portrait">
+<link rel="stylesheet" type="text/css" href="css/member.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/member.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+
+
+
+<style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        font:  'San Francisco','Helvetica','STXihei', "华文细黑" ,"Microsoft YaHei", "微软雅黑","SimHei","黑体"	;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        list-style: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    html, body {
+        -webkit-font-smoothing:antialiased;
+        width: 100%;
+        height: 100%;
+        background:url('img/Background.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+    @media only screen and (min-width: 1081px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 721px) and (max-width: 1080px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 641px) and (max-width: 720px) {
+        html,body{
+            font-size: 178%
+        }
+
+    }
+    @media only screen and (min-width: 481px) and (max-width: 640px) {
+        html,body{
+            font-size: 160%
+        }
+
+    }
+    @media only screen and (min-width: 415px) and (max-width: 480px) {
+        html,body{
+            font-size: 120%
+        }
+    }
+    @media only screen and (min-width: 376px) and (max-width: 414px) {
+        html,body{
+            font-size: 103.5%
+        }
+    }
+    @media only screen and (min-width: 361px) and (max-width: 375px) {
+        html,body{
+            font-size: 93.75%
+        }
+    }
+    @media only screen and (min-width: 321px) and (max-width: 360px) {
+        html,body{
+            font-size:90%
+        }
+
+    }
+    @media only screen and (max-width: 320px){
+        html,body{
+            font-size: 80%
+        }
+
+    }
+
+
+    .main1{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .buy_edit_logo{
+        width: 100%;
+        height: 8rem;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: center ;
+        align-items: center ;
+        align-content: center ;
+    }
+    .buy_edit_logo img{
+        width: 10rem;
+
+    }
+    .buy_edit_uploadimg{
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+    .buy_edit_uploadimg div{
+        width:48%;
+        height: auto;
+    }
+
+    .buy_edit_uploadimg div h2{
+        width: 100%;
+        height: 1.5rem;
+        line-height:1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .buy_edit_uploadimg div h3{
+        width: 100%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        color: #7a7a7a;
+
+    }
+    .buy_edit_uploadimg div h4{
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        border: 1px solid #979797;
+        font-size: 0.9rem;
+        color: #1a1a1a;
+        text-align: center;
+    }
+    .buy_edit_uploadimg_font_cover{
+
+    }
+
+    .buy_edit_uploadimg_topic_img{
+
+    }
+
+    .buy_edit_type{
+        width: 90%;
+        height: auto;
+        margin:1rem 5% 0 5%;
+
+    }
+    .buy_edit_type_title{
+        width: 100%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        color: #7a7a7a;
+    }
+    .buy_edit_type_img{
+        width: 100%;
+        height: 3rem;
+
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+    .buy_edit_type_img img{
+        height: 2rem;
+    }
+    .buy_edit_area{
+        width: 90%;
+        margin: 0.5rem 5%;
+        border: 1px solid #979797;
+    }
+
+    .buy_edit_area_title{
+        width:90%;
+        height: 3rem;
+        line-height: 3rem;
+        margin: 0.5rem 5%;
+        border-bottom:1px solid #979797 ;
+    }
+
+    .buy_edit_area_title input{
+        width:100%;
+        height: 2rem;
+        border: 0;
+        background: transparent;
+        color: #7a7a7a;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .buy_edit_area_abstract{
+        width:90%;
+        height: 3rem;
+        line-height: 3rem;
+        margin: 0.5rem 5%;
+        border-bottom:1px solid #979797 ;
+    }
+
+    .buy_edit_area_abstract input{
+        width:100%;
+        height: 2rem;
+        border: 0;
+        background: transparent;
+        color: #7a7a7a;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    .buy_edit_area_content{
+        width:90%;
+        height: auto;
+        margin: 0.5rem 5%;
+
+    }
+    .buy_edit_area_content textarea{
+        width: 100%;
+        height: auto;
+        min-height: 7.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        font-weight: bold;
+        border: 0;
+        background: transparent;
+        resize: none;
+    }
+
+    .buy_edit_area_img{
+        width:90%;
+        height: 2rem;
+        line-height: 2rem;
+        margin: 0.5rem 5%;
+        border-bottom:1px solid #979797 ;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: flex-start ;
+        align-items: center ;
+        align-content: center ;
+    }
+    .buy_edit_area_img h2{
+        width:auto;
+        height: 2rem;
+        line-height:2rem;
+        margin-right: 0.5rem;
+        color: #7a7a7a;
+
+    }
+    .buy_edit_area_img img{
+        height: 1.5rem;
+    }
+
+    .buy_edit_area_schedule{
+        width:90%;
+        height:auto;
+        margin: 0.5rem 5%;
+        border-bottom:1px solid #979797 ;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+
+    .buy_edit_area_schedule:last-child{
+        border-bottom:0 ;
+    }
+    .buy_edit_area_schedule_content{
+        width: 100%;
+        height: auto;
+        min-height: 4.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        font-weight: bold;
+        border: 0;
+        background: transparent;
+        resize: none;
+    }
+    .buy_edit_area_schedule_img{
+        height: 2rem;
+        line-height: 2rem;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+
+    .buy_edit_area_schedule_img h2{
+        width:auto;
+        height: 2rem;
+        line-height:2rem;
+        margin-right: 0.5rem;
+        color: #7a7a7a;
+
+    }
+    .buy_edit_area_schedule_img img{
+        height: 1.5rem;
+    }
+
+    .buy_edit_area_schedule_btn{
+        height: 2rem;
+        line-height: 2rem;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+
+    .buy_edit_area_schedule_btn h2{
+        width:auto;
+        height: 2rem;
+        line-height:2rem;
+        margin-right: 0.5rem;
+        color: #7a7a7a;
+
+    }
+    .buy_edit_area_schedule_btn img{
+        height: 1.5rem;
+    }
+    .buy_edit_text{
+        width: 90%;
+        margin: 0.5rem 5%;
+        border: 1px solid #979797;
+    }
+
+    .buy_edit_text textarea{
+        width: 90%;
+        margin: 0.5rem 5%;
+        height: auto;
+        min-height: 7.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        font-weight: bold;
+        border: 0;
+        background: transparent;
+        resize: none;
+    }
+    .buy_edit_picture{
+        width: 90%;
+        margin: 1rem 5%;
+        display: flex ;
+        flex-direction: row ;
+        flex-wrap: wrap ;
+        justify-content: space-between ;
+        align-items: center ;
+        align-content: center ;
+    }
+
+    .buy_edit_picture h2{
+        width: auto;
+
+    }
+
+    .buy_edit_picture h4{
+        width: 12rem;
+        height: 2rem;
+        line-height: 2rem;
+        border: 1px solid #979797;
+        font-size: 0.9rem;
+        color: #1a1a1a;
+        text-align: center;
+    }
+
+    .buy_edit_notice{
+        width: 90%;
+        margin: 0.5rem 5%;
+        border: 1px solid #979797;
+    }
+
+    .buy_edit_notice textarea{
+        width: 90%;
+        margin: 0.5rem 5%;
+        height: auto;
+        min-height: 7.5rem;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        font-weight: bold;
+        border: 0;
+        background: transparent;
+        resize: none;
+    }
+
+    .bot_manu{
+        width: 100%;
+        height: 10%;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+    }
+
+
+    .bot_manu img{
+        width: 10%;
+        margin:0.8rem 5%;
+        float: left;
+    }
+
+
+
+</style>
+<script>
+
+</script>
+
+</head>
+
+<body>
+<!--主框内容-->
+
+<div class="main1">
+    <form method="post">
+    <!--展示LOGO-->
+    <div class="buy_edit_logo">
+        <img src="img/logo.png">
+    </div>
+    <!--上传图片-->
+    <div class="buy_edit_uploadimg">
+        <!--上传封面-->
+        <div class="buy_edit_uploadimg_font_cover">
+            <h2>封面</h2>
+            <h3>建议尺寸：750像素*380像素</h3>
+            <h4>本地上传</h4>
+        </div>
+        <!--上传专题页大图-->
+        <div class="buy_edit_uploadimg_topic_img">
+            <h2>专题页大图</h2>
+            <h3>建议尺寸：750像素*1180像素</h3>
+            <h4>本地上传</h4>
+        </div>
+    </div>
+    <!--选择主题-->
+    <div class="buy_edit_type">
+        <!--标题-->
+        <h2 class="buy_edit_type_title">
+            选择主题
+        </h2>
+        <!--主题-->
+        <div class="buy_edit_type_img">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+            <img src="img/Oval 53 + UMBRELLA.png">
+
+        </div>
+    </div>
+    <!--录入区域-->
+    <div class="buy_edit_area">
+        <!--标题-->
+        <div class="buy_edit_area_title">
+            <input type="text" value="输入标题，限制12个字符">
+        </div>
+
+        <!--摘要-->
+        <div class="buy_edit_area_abstract">
+            <input type="text" value="输入摘要，限制24个字符">
+        </div>
+        <!--文字内容-->
+        <div class="buy_edit_area_content">
+            <textarea value="描述文字内容">
+
+            </textarea>
+        </div>
+        <!--上传图片-->
+        <div class="buy_edit_area_img">
+            <!--已上传的图片-->
+            <!--<div></div>-->
+            <!--上传图片-->
+            <h2>插入图片</h2>
+            <img src="img/Oval 53 + UMBRELLA Copy.png">
+        </div>
+        <!--第一天行程内容-->
+        <div class="buy_edit_area_schedule">
+            <!--内容-->
+            <textarea class="buy_edit_area_schedule_content">第一天的行程内容</textarea>
+            <!--图片-->
+            <div class="buy_edit_area_schedule_img">
+                <h2>插入图片</h2>
+                <img src="img/Oval 53 + UMBRELLA Copy.png">
+            </div>
+            <!--增加行程按钮-->
+            <div class="buy_edit_area_schedule_btn">
+                <h2>增加行程</h2>
+                <img src="img/Oval 53 + UMBRELLA Copy.png">
+            </div>
+        </div>
+    </div>
+    <!--出行文字-->
+    <div class="buy_edit_text">
+        <textarea>出行文字内容</textarea>
+    </div>
+    <!--内容图片-->
+    <div class="buy_edit_picture">
+        <h2>内容图片</h2>
+        <h4>本地上传</h4>
+    </div>
+    <!--须知内容-->
+    <div class="buy_edit_notice">
+        <textarea>须知文字内容</textarea>
+    </div>
+
+    <input style="width:100%;height:50px" class="login" type="submit" name="register" value="">
+    </form>
+</div>
+
+<!--<div class="bot_manu">-->
+    <!--<img src="img/1.png">-->
+    <!--<img src="img/2.png">-->
+    <!--<img src="img/3.png">-->
+    <!--<img src="img/4.png">-->
+    <!--<img src="img/5.1.png">-->
+<!--</div>-->
+
+
+</body>
+
+</html>

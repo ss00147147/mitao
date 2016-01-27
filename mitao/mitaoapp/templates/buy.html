@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>蜜桃旅行</title>
+<meta name="keywords" content="蜜桃旅行"/>
+<meta name="description" content="蜜桃旅行"/>
+<meta name="title" content="蜜桃旅行">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="no"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+<meta name="x5-orientation" content="portrait">
+<meta name="screen-orientation" content="portrait">
+<link rel="stylesheet" type="text/css" href="css/member.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/member.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+
+
+
+<style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        font:  'San Francisco','Helvetica','STXihei', "华文细黑" ,"Microsoft YaHei", "微软雅黑","SimHei","黑体"	;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        list-style: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    html, body {
+        -webkit-font-smoothing:antialiased;
+        width: 100%;
+        height: 100%;
+        background:url('img/Background.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+    @media only screen and (min-width: 1081px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 721px) and (max-width: 1080px) {
+        html,body{
+            font-size: 270%
+        }
+
+    }
+    @media only screen and (min-width: 641px) and (max-width: 720px) {
+        html,body{
+            font-size: 178%
+        }
+
+    }
+    @media only screen and (min-width: 481px) and (max-width: 640px) {
+        html,body{
+            font-size: 160%
+        }
+
+    }
+    @media only screen and (min-width: 415px) and (max-width: 480px) {
+        html,body{
+            font-size: 120%
+        }
+    }
+    @media only screen and (min-width: 376px) and (max-width: 414px) {
+        html,body{
+            font-size: 103.5%
+        }
+    }
+    @media only screen and (min-width: 361px) and (max-width: 375px) {
+        html,body{
+            font-size: 93.75%
+        }
+    }
+    @media only screen and (min-width: 321px) and (max-width: 360px) {
+        html,body{
+            font-size:90%
+        }
+
+    }
+    @media only screen and (max-width: 320px){
+        html,body{
+            font-size: 80%
+        }
+
+    }
+
+
+    .main1{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .introduce{
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+        background:url('img/Background313.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .introduce div{
+        width: 80%;
+        height: 10rem;
+        margin: auto;
+        top: 10%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+
+    }
+    
+    .introduce div h2{
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    .introduce div h3{
+        margin-top:1rem ;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .buy{
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        top: 70%;
+        background-size: 100% 100%;
+    }
+
+
+
+    .buy_info{
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .buy_img{
+        width: 80%;
+        height: 60%;
+        margin: 0 10%;
+    }
+
+    .buy_img img{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius:3rem;
+    }
+
+    .buy_text{
+        width: 100%;
+        height: 40%;
+        opacity: 0.7;
+        background: #000;
+    }
+
+    .buy_text h2{
+        width: 50%;
+        color: #fff;
+        float: left;
+        text-align: left;
+        z-index: 10;
+        line-height: 1.8rem;
+        margin-left:10% ;
+    }
+
+    .buy_text h3{
+        width: 30%;
+        color: #fff;
+        float: left;
+        text-align:left;
+        line-height: 1.8rem;
+        z-index: 10;
+        margin-left:10% ;
+
+    }
+
+    .buy_text h3 span{
+        text-decoration: line-through;
+    }
+
+    /*.buy_bg{*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*opacity: 0.3;*/
+        /*background: #000;*/
+        /*position: absolute;*/
+    /*}*/
+    .buy_button{
+        width: 100%;
+        height: 50%;
+        background: #e96f77;
+    }
+
+    .buy_button div{
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .buy_button div h2{
+        width:50%;
+        height:100%;
+        float: left;
+        text-align:left;
+        font-size: 1.6rem;
+        line-height: 4.3rem;
+        color: #fff;
+        margin-left: 10%;
+
+    }
+
+    .buy_button div h3{
+        width: 30%;
+        height: 100%;
+        float: left;
+        text-align:left;
+        font-size: 1.2rem;
+        line-height: 4.3rem;
+        color: #fff;
+        margin-left: 10%;
+
+    }
+
+
+
+
+    .bot_manu{
+        width: 100%;
+        height: 10%;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+    }
+
+
+    .bot_manu img{
+        width: 10%;
+        margin:0.8rem 5%;
+        float: left;
+    }
+
+
+
+</style>
+<script>
+
+</script>
+
+</head>
+
+<body>
+<!--主框内容-->
+<div class="main1">
+    <!--展示大图-->
+    <div class="introduce">
+        <div>
+            <h2>纽约七日游</h2>
+            <h3>Stunning Photographs Offer a Rare Behind-the-scenes View of Theatre Stages</h3>
+        </div>
+
+    </div>
+    <!--团购明细-->
+    <div class="buy">
+        <!--已购头像-->
+        <div class="buy_info">
+            <div class="buy_img">
+                <img src="img/bj.png">
+                <img src="img/bj.png">
+                <img src="img/bj.png">
+            </div>
+            <div class="buy_text">
+
+                <!--人数-->
+                <h2>6人团/已有3人</h2>
+                <!--价格-->
+                <h3>原价：<span>￥9888</span></h3>
+
+            </div>
+
+        </div>
+        <!--已购描述-->
+        <div class="buy_button">
+            <div>
+            <h2>团价￥7888</h2>
+            <h3>立刻组团</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div class="bot_manu">
+
+    <img src="img/1.png">
+    <img src="img/2.png">
+    <img src="img/3.png">
+    <img src="img/4.png">
+    <img src="img/5.1.png">
+
+
+
+</div>
+
+
+</body>
+
+</html>
